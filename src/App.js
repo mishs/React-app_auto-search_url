@@ -1,4 +1,5 @@
 import React from 'react';
+import InputSearchArea from './components/InputSearchArea'
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         >
           Learn React
         </a> */}
+        <InputSearchArea />
       </header>
     </div>
   );
