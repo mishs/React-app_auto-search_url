@@ -1,6 +1,10 @@
 import React from 'react'
 
 class InputSearchArea extends React.Component {
+    constructor(props) {
+        super(props);
+        this.myRef = React.createRef();
+      }
 
     render() {
 
