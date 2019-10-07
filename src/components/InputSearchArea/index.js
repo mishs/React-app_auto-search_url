@@ -18,6 +18,7 @@ class InputSearchArea extends React.Component {
                  style={inputStyling}
                  className="show-value"
                  name="website"
+                 required pattern="https?://.*"
                  />
             </div>
         )
