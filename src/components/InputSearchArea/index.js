@@ -13,6 +13,11 @@ class InputSearchArea extends React.Component {
         this.textInput.current.focus();
       }
 
+      componentDidMount() {
+        // autofocus the input on mount
+        this.focusTextInput();
+      }
+
     render() {
         const inputStyling = {
             minWidth: '50vw',
