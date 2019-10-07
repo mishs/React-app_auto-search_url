@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <h2>
           Auto-Complete Search App
-        </p>
+        </h2>
         <InputSearchArea />
       </header>
     </div>
