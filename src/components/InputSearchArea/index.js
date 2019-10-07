@@ -17,7 +17,14 @@ class InputSearchArea extends React.Component {
         const inputStyling = {
             minWidth: '50vw',
             height: '30px',
-            borderRadius: 8
+            borderRadius: 8,
+            marginRight: '2px'
+        };
+
+        const btnStyling = {
+            minWidth: '12vw',
+            height: '35px',
+            borderRadius: 5
         };
  
         return (
@@ -35,8 +42,9 @@ class InputSearchArea extends React.Component {
                  />
                  <input
                     type="button"
-                    value="Focus the text input"
+                    value="Click for Enter"
                     onClick={this.focusTextInput}
+                    style={btnStyling}
                 />
             </div>
         )
