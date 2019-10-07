@@ -13,7 +13,7 @@ class InputSearchArea extends React.Component {
         return (
             <div>
                 <input 
-                 type='text' 
+                 type='url' 
                  placeholder='Enter url and Press Enter' 
                  style={inputStyling}
                  className="show-value"
