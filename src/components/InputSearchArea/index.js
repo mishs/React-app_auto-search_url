@@ -6,13 +6,13 @@ class InputSearchArea extends React.Component {
 
     const inputStyling = {
         minWidth: '50vw',
-        height: '20px',
-        borderRadius: 5
+        height: '30px',
+        borderRadius: 8
     };
 
         return (
             <div>
-                <input type='text' placeholder='url loads web-page' style={inputStyling}/>
+                <input type='text' placeholder='Enter url and Press Enter' style={inputStyling}/>
             </div>
         )
     }
