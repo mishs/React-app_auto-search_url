@@ -9,7 +9,10 @@ function App() {
         <h2>
           Auto-Complete Search App
         </h2>
-        <InputSearchArea />
+        {/* <InputSearchArea /> */}
+        <InputSearchArea
+        inputRef={el => this.inputElement = el}
+      />
       </header>
     </div>
   );
