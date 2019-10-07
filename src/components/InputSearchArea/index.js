@@ -6,13 +6,17 @@ class InputSearchArea extends React.Component {
         this.myRef = React.createRef();
       }
 
-    render() {
+      focusTextInput() {
+        // Explicitly focus the text input using the raw DOM API
+        this.textInput.current.focus();
+      }
 
-    const inputStyling = {
-        minWidth: '50vw',
-        height: '30px',
-        borderRadius: 8
-    };
+    render() {
+        const inputStyling = {
+            minWidth: '50vw',
+            height: '30px',
+            borderRadius: 8
+        };
  
         return (
             <div>
