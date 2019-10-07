@@ -25,14 +25,19 @@ class InputSearchArea extends React.Component {
      {/* tell React that we want to associate the <input> ref
      with the `textInput` that we created in the constructor */}
                 <input 
-                 type='url' 
-                 placeholder='Enter url and Press Enter' 
-                 ref={this.textInput}
-                 style={inputStyling}
-                 className="show-value"
-                 name="website"
-                 required pattern="https?://.*"
+                    type='url' 
+                    placeholder='Enter url and Press Enter' 
+                    ref={this.textInput}
+                    style={inputStyling}
+                    className="show-value"
+                    name="website"
+                    required pattern="https?://.*"
                  />
+                 <input
+                    type="button"
+                    value="Focus the text input"
+                    onClick={this.focusTextInput}
+                />
             </div>
         )
     }
