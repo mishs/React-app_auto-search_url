@@ -6,6 +6,11 @@ class InputSearchArea extends React.Component {
             // create a ref to store the textInput DOM element
             this.textInput = React.createRef();
             this.focusTextInput = this.focusTextInput.bind(this);
+
+            this.setTextInputRef = element => {
+                this.textInput = element;
+              };
+          
       }
 
       focusTextInput() {
