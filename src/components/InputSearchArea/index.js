@@ -55,8 +55,7 @@ class InputSearchArea extends React.Component {
                     placeholder='Enter url and Press Enter' 
                     ref={this.setTextInputRef}
                     style={inputStyling}
-                    className="show-value"
-                    name="website"
+                    value={this.state.value}
                     required pattern="https?://.*"
                  />
             </div>
