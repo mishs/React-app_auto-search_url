@@ -4,15 +4,12 @@ import $ from 'jquery'
 class InputSearchArea extends React.Component {
     constructor(props) {
         super(props);
-            // create a ref to store the textInput DOM element
-            this.textInput = null;
-            this.inputRef = props;
-            this.url = '';
+        this.state = {
+            value: ''
+        }
         
-            this.setTextInputRef = element => {
-                this.textInput = element;
-              };
-          
+            this.handleChange = this.handleChange.bind(this);
+            //   this.handleSubmit = this.handleSubmit.bind(this); 
       }
 
       handleChange = () => {
@@ -40,12 +37,6 @@ class InputSearchArea extends React.Component {
         marginRight: '2px'
     };
 
-      const btnStyling = {
-        minWidth: '12vw',
-        height: '35px',
-        borderRadius: 5
-    };
-
         return (
             <div>
      {/* tell React that we want to associate the <input> ref
@@ -56,6 +47,7 @@ class InputSearchArea extends React.Component {
                     ref={this.setTextInputRef}
                     style={inputStyling}
                     value={this.state.value}
+                    onChange={this.handleChange}
                     required pattern="https?://.*"
                  />
             </div>
