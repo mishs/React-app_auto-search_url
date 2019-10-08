@@ -7,20 +7,17 @@ class InputSearchArea extends React.Component {
         this.state = {
             value: ''
         }
-        
+
             this.handleChange = this.handleChange.bind(this);
             //   this.handleSubmit = this.handleSubmit.bind(this); 
       }
 
-      handleChange = () => {
+      handleChange = (event) => {
         // Focus the text input using the raw DOM API
-        
-        if (this.textInput){ this.textInput.focus();
-                // let keycode = '',
-                // if (keycode === '13') {
-             var name=$("input[name=website]").val();
-             window.open(name);
-            }
+        if (event.keyCode && event.keyCode === 13) {
+            window.open(`http://${this.state.value}`)
+        }
+        this.setState({value: event.target.value});
       };
     
       componentDidMount() {
