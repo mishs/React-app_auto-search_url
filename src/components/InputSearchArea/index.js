@@ -1,5 +1,4 @@
 import React from 'react'
-import $ from 'jquery'
 
 class InputSearchArea extends React.Component {
     constructor(props) {
