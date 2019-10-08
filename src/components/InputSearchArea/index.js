@@ -7,6 +7,7 @@ class InputSearchArea extends React.Component {
             // create a ref to store the textInput DOM element
             this.textInput = null;
             this.inputRef = props;
+            this.url = '';
         
             this.setTextInputRef = element => {
                 this.textInput = element;
@@ -14,8 +15,9 @@ class InputSearchArea extends React.Component {
           
       }
 
-      focusTextInput = () => {
+      handleChange = () => {
         // Focus the text input using the raw DOM API
+        
         if (this.textInput){ this.textInput.focus();
                 // let keycode = '',
                 // if (keycode === '13') {
@@ -26,7 +28,8 @@ class InputSearchArea extends React.Component {
     
       componentDidMount() {
         // autofocus the input on mount
-        this.focusTextInput();
+
+        this.handleChange();
       }
 
     render() {
@@ -56,12 +59,6 @@ class InputSearchArea extends React.Component {
                     name="website"
                     required pattern="https?://.*"
                  />
-                 <input
-                    type="button"
-                    value="Click for Enter"
-                    onClick={this.focusTextInput}
-                    style={btnStyling}
-                />
             </div>
         );
     }
