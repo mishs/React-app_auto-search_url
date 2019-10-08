@@ -20,11 +20,10 @@ class InputSearchArea extends React.Component {
         this.setState({value: event.target.value});
       };
     
-      componentDidMount() {
-        // autofocus the input on mount
-
-        this.handleChange();
-      }
+      componentDidMount(){
+        // document.addEventListener("keydown", this.handleEnter, false);
+        document.addEventListener("keydown", this.handleChange, false);
+    }
 
     render() {
       const inputStyling = {
