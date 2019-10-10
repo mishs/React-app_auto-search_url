@@ -5,7 +5,7 @@ class InputSearchArea extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            url_value: '',
+            value: '',
             valid: true,
         }
 
@@ -14,9 +14,9 @@ class InputSearchArea extends React.Component {
             // this.handleEmailChange = this.handleEmailChange.bind(this)
       }
 
-    validateEmail (url_value) {
+    validateEmail (value) {
       const regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
-        if (regexp.test(url_value))
+        if (regexp.test(value))
         {
           return this.setState({valid: true});
         }
@@ -29,8 +29,8 @@ class InputSearchArea extends React.Component {
         handleChange = (event) => {
           var fieldContainerClass = 'field-container'
         // Focus the text input using the raw DOM API
-        const url_value = event.target.value
-        const emailValid = this.validateEmail(url_value) 
+        const value = event.target.value
+        const emailValid = this.validateEmail(value) 
   
 
         if (event.keyCode && event.keyCode === 13) {
@@ -43,7 +43,7 @@ class InputSearchArea extends React.Component {
             
         }
         this.setState(
-          {url_value: event.target.value,
+          {value: event.target.value,
             valid: emailValid
           });
         
@@ -90,7 +90,7 @@ class InputSearchArea extends React.Component {
 
 <div className={fieldContainerClass}>
         <input type='url'
-         url_value={this.state.value} 
+         value={this.state.value} 
           placeholder='Enter url and Press Enter' 
           ref={this.setTextInputRef}
           style={inputStyling}
@@ -100,7 +100,7 @@ class InputSearchArea extends React.Component {
            />
         <span>Invalid url</span>
       </div>
- </div>
+            </div>
         );
     }
 }
