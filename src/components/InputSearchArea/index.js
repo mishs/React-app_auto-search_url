@@ -1,26 +1,18 @@
 import React from 'react'
-<<<<<<< HEAD
 import './Input.css';
-=======
->>>>>>> 4354e04a8c16a3aa440778c15fd11f3141a2b688
 
 class InputSearchArea extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-<<<<<<< HEAD
             url_value: '',
             valid: true,
-=======
-            value: ''
->>>>>>> 4354e04a8c16a3aa440778c15fd11f3141a2b688
         }
 
             this.handleChange = this.handleChange.bind(this);
             //   this.handleSubmit = this.handleSubmit.bind(this); 
       }
 
-<<<<<<< HEAD
     validateUrl (url_value) {
       const regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
         if (regexp.test(url_value))
@@ -54,14 +46,6 @@ class InputSearchArea extends React.Component {
             valid: urlValid
           });
         
-=======
-      handleChange = (event) => {
-        // Focus the text input using the raw DOM API
-        if (event.keyCode && event.keyCode === 13) {
-            window.open(`http://${this.state.value}`)
-        }
-        this.setState({value: event.target.value});
->>>>>>> 4354e04a8c16a3aa440778c15fd11f3141a2b688
       };
     
       componentDidMount(){
@@ -89,7 +73,6 @@ class InputSearchArea extends React.Component {
   //     window.open(`http://${this.state.value}`)
   // }
 
-<<<<<<< HEAD
      return (
       <div>
        <div className={fieldContainerClass}>
@@ -104,21 +87,6 @@ class InputSearchArea extends React.Component {
            />
         <span>Invalid url</span>
       </div>
-=======
-        return (
-            <div>
-     {/* tell React that we want to associate the <input> ref
-     with the `textInput` that we created in the constructor */}
-                <input 
-                    type='url' 
-                    placeholder='Enter url and Press Enter' 
-                    ref={this.setTextInputRef}
-                    style={inputStyling}
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                    required pattern="https?://.*"
-                 />
->>>>>>> 4354e04a8c16a3aa440778c15fd11f3141a2b688
             </div>
         );
     }
