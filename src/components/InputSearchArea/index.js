@@ -10,7 +10,7 @@ class InputSearchArea extends React.Component {
         }
 
             this.handleChange = this.handleChange.bind(this);
-            //   this.handleSubmit = this.handleSubmit.bind(this); 
+            this.handleSubmit = this.handleSubmit.bind(this); 
       }
 
     validateUrl (url_value) {
@@ -47,6 +47,13 @@ class InputSearchArea extends React.Component {
           });
         
       };
+
+      
+      handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
+      }
+
     
       componentDidMount(){
         // document.addEventListener("keydown", this.handleEnter, false);
@@ -74,7 +81,7 @@ class InputSearchArea extends React.Component {
   // }
 
      return (
-      <div>
+      <form>
        <div className={fieldContainerClass}>
         <input type='url'
          url_value={this.state.value} 
@@ -87,7 +94,7 @@ class InputSearchArea extends React.Component {
            />
         <span>Invalid url</span>
       </div>
-            </div>
+   </form>
         );
     }
 }
