@@ -1,9 +1,9 @@
-/* html, body {
+html, body {
 	height: 100%;
 }
 
 body {
-	background: #333;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -28,15 +28,12 @@ p {
 
 input {
 	background: white;
-	border-radius: 4px;
+	border-radius: 6px;
 	border: 2px solid #e8e8e8;
-	width: 95%;
-	height: 38px;
-	margin-top: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
 	box-sizing: border-box;
-} */
+}
 
 .field-container {
 	text-align: left;
@@ -51,13 +48,13 @@ input {
 	display: inline-block;
 	float: right;
 	margin-top: 10px;
-	font-weight: 600;
+	font-weight: 800;
 	color: #ca3938;
 }
 
 .field-container.error span {
 	display: inline-block;
-	font-size: 12px;
+	font-size: 14px;
 	text-align: left;
 	width: 100%;
 	font-style: italic;
