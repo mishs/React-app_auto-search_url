@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Input.css';
 
 class InputSearchArea extends React.Component {
     constructor(props) {
